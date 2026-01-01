@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    overflow: hidden;
+}
+
+.header {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.game-screen {
+    padding: 40px;
+    text-align: center;
+}
+
+.game-screen h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #495057;
+}
+
+.btn {
+    padding: 14px 32px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.start-btn {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    margin-top: 20px;
+}
+
+.question-container {
+    padding: 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.question-number {
+    font-weight: bold;
+    color: #4facfe;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.question-text {
+    margin-bottom: 25px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+.options {
+    display: grid;
+    gap: 15px;
+}
+
+.option {
+    padding: 18px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    cursor: pointer;
+    background: #fafafa;
+    text-align: left;
+    font-size: 1.05rem;
+}
+
+.option:hover {
+    border-color: #4facfe;
+    background: #f0f9ff;
+}
+
+.option.selected {
+    border-color: #4facfe;
+    background: #e3f2fd;
+}
+
+.option.correct {
+    background: #d4edda;
+    border-color: #28a745;
+}
+
+.option.incorrect {
+    background: #f8d7da;
+    border-color: #dc3545;
+}
+
+.feedback {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    display: none;
+}
+
+.feedback.correct {
+    background: #d4edda;
+    color: #155724;
+    display: block;
+}
+
+.feedback.incorrect {
+    background: #f8d7da;
+    color: #721c24;
+    display: block;
+}
+
+.controls {
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f9fa;
+}
+
+.score-display {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #495057;
+    background: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+.next-btn {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.next-btn:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.final-score {
+    text-align: center;
+    padding: 50px 30px;
+}
+
+.final-score h2 {
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.score-circle {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 35px;
+    color: white;
+    font-size: 3.2rem;
+    font-weight: bold;
+}
+
+.score-message {
+    font-size: 1.4rem;
+    margin-bottom: 35px;
+    line-height: 1.6;
+    color: #495057;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.restart-btn {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.95rem;
+    margin-top: 12px;
+    font-style: italic;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .controls {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}

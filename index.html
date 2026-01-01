@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Science Quiz Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎮 Computer Science Quiz Game 🎮</h1>
+            <p>Test your knowledge across 8 chapters of Computer Science</p>
+        </div>
+        
+        <!-- Game Start Screen -->
+        <div id="game-start" class="game-screen">
+            <h2>Ready to Play?</h2>
+            <p>Answer 80 questions from 8 different chapters of Computer Science!</p>
+            <p>You must answer each question before moving to the next.</p>
+            <button class="btn start-btn" id="start-btn">Start Game</button>
+        </div>
+        
+        <!-- Quiz Container -->
+        <div id="quiz-container" class="hidden"></div>
+        
+        <!-- Controls -->
+        <div class="controls hidden" id="quiz-controls">
+            <div class="score-display">Score: <span id="current-score">0</span>/80</div>
+            <button id="next-btn" class="next-btn" disabled>Next Question</button>
+            <button id="submit-btn" class="submit-btn hidden">Finish Game</button>
+        </div>
+        
+        <!-- Final Score -->
+        <div id="final-score" class="final-score hidden">
+            <h2>Game Over! 🎉</h2>
+            <div class="score-circle" id="final-score-circle">0/80</div>
+            <div class="score-message" id="score-message"></div>
+            <button class="restart-btn" id="restart-btn">Play Again</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
